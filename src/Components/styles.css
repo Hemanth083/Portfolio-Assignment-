@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "nothing";
+  src: url("../assets/Nothing_You_Could_Do,Ojuju/Nothing_You_Could_Do/NothingYouCouldDo-Regular.ttf");
+}
+@font-face {
+  font-family: "no";
+  src: url("../assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf");
+}
+@font-face {
+  font-family: "bold";
+  src: url("../assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf");
+}
+.about {
+  height: 700px;
+}
+.cropped-image-container {
+  overflow: hidden;
+}
+.paragraph {
+  font-family: "no";
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  text-align: justify;
+}
+
+.cropped-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.Name {
+  font-family: "nothing";
+  color: salmon;
+}
+.I {
+  color: salmon;
+}
+.social-media {
+  width: 45%;
+  display: flex;
+  grid-gap: 5%;
+}
+.Social-images {
+  padding: 9px;
+  border-radius: 100%;
+  border: 2px solid slategrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MediaImage {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+.MediaImage:hover {
+  transform: scale(1.6); /* Scale up the image on hover */
+}
+.heading {
+  font-family: "bold" !important;
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+.WhatIDo {
+  height: 1500px !important;
+}
+.carousel-container {
+  width: 50%; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
+  margin: auto; /* Center the Carousel horizontally */
+}
+
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-gap: 20px; /* Gap between grid items */
+  width: 80%;
+} /* Custom CSS for Carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  color: salmon; /* Set the color of the controls */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='salmon' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.9 0.29a0.999 0.999 0 0 0-1.41 0L1.3 3.29c-0.38 0.39-0.38 1.03 0 1.41l3.29 3.29c0.2 0.2 0.45 0.29 0.71 0.29s0.51-0.1 0.71-0.29c0.39-0.39 0.39-1.03 0-1.41L3.41 4l2.49-2.49c0.39-0.39 0.39-1.03 0-1.41z'/%3e%3c/svg%3e"); /* Set the arrow icon color */
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='salmon' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.1 0.29a0.999 0.999 0 0 0-1.41 1.41L3.59 4 0.1 7.49c-0.39 0.39-0.39 1.03 0 1.41s1.02 0.39 1.41 0L5.41 4 2.1 0.69c-0.2-0.2-0.45-0.29-0.71-0.29z'/%3e%3c/svg%3e"); /* Set the next arrow icon color */
+}
+
+/* Custom CSS for Carousel indicators */
+.carousel-indicators .active {
+  background-color: salmon; /* Set the background color of active indicator */
+}
+
+.service-container {
+  position: relative;
+  overflow: hidden; /* Ensure the overlay stays within the container */
+}
+
+.service-overlay {
+  font-family: "bold";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  padding: 15% 0% 13% 0%;
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+  color: white;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.ImageServices {
+  height: 400px !important;
+  object-fit: cover;
+}
+.service-overlay h2,
+.service-overlay p {
+  margin: 0;
+}
+
+.service-container .service-overlay {
+  opacity: 1; /* Show the overlay on hover */
+}
+
+.service-container img {
+  width: 100%; /* Ensure the image fills its container */
+  height: auto;
+}
+p {
+  font-family: "bold";
+  color: white;
+}
+/* styles.css */
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* //////////////////////////////////////////////////////// */
+
+@media (max-width: 820px) {
+  .about-Container {
+    flex-direction: column !important;
+  }
+  .paragraph {
+    color: rgb(152, 152, 152) !important;
+  }
+  .about-content {
+    /* padding-top: 0%; */
+    width: 100% !important;
+    height: 400px;
+  }
+
+  .cropped-image-container {
+    width: 100% !important;
+    height: 500px !important;
+    overflow: visible;
+  }
+  .mainImage {
+    height: auto;
+  }
+  .testimonials {
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .TestimonialText {
+    width: 100%;
+    text-align: justify;
+    margin-top: 8%;
+  }
+  .about {
+    height: 900px;
+  }
+  .carousel-container {
+    width: 100%;
+  }
+  .Wahat {
+    margin-top: 50px;
+  }
+  .heading {
+    font-size: 26px;
+  }
+}
