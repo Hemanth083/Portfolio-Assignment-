@@ -34,24 +34,23 @@
 .curser {
   cursor: pointer;
 }
-/* Override Bootstrap styles for Dropdown */
 .dropdown-toggle {
-  background-color: black; /* Background color */
-  color: white; /* Text color */
-  border-color: black; /* Border color */
+  background-color: black; 
+  color: white; 
+  border-color: black; 
 }
 
 .dropdown-toggle:hover,
 .dropdown-toggle:focus,
 .dropdown-toggle:active {
-  background-color: black; /* Hover, focus, and active background color */
-  color: white; /* Hover, focus, and active text color */
-  border-color: black; /* Hover, focus, and active border color */
+  background-color: black; 
+  color: white; 
+  border-color: black; 
 }
 
 .dropdown-menu {
-  background-color: black; /* Dropdown menu background color */
-  color: white; /* Dropdown menu text color */
+  background-color: black;
+  color: white;
 }
 
 /* Override Bootstrap styles for Button */

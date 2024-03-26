@@ -11,6 +11,7 @@
 .NavButtons:hover {
   border-right: 5px solid salmon !important;
   /* background-color: rgb(34, 34, 34); */
+  color: #f1f1f1 !important;
 }
 .buttonBackground {
   background-color: salmon;
@@ -24,10 +25,16 @@
   height: 100%;
 }
 .nav {
-  height: 750px;
+  height: 750px !important;
   width: 10%;
   border-right: 4px solid black;
 }
+.fixed-left {
+  left: 0;
+  right: auto;
+  transform: translateX(0%);
+}
+
 .Content {
   width: 90%;
   margin-left: 10%;
@@ -91,7 +98,7 @@
     width: 100% !important;
   }
   .active {
-    background-color: rgba(0, 0, 0, 0.685) !important;
+    background-color: black;
     color: white !important;
   }
   .NavButtons:hover,

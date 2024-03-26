@@ -18,27 +18,25 @@ const About = () => {
         };
 
         fetchUserData();
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
 
     }, []); // Run once on mount to fetch user data
 
     useEffect(() => {
-        // Set interval for changing Carousel index if userData and testimonials are available
         if (userData && userData.user && userData.user.testimonials) {
             const interval = setInterval(() => {
                 setCurrentTestimonialIndex(prevIndex => {
-                    // Check if the index is at the last item, then loop back to the first item
                     if (prevIndex === userData.user.testimonials.length - 1) {
                         return 0;
                     } else {
                         return prevIndex + 1;
                     }
                 });
-            }, 2300); // Change the duration as needed
+            }, 2300); 
 
             return () => clearInterval(interval);
         }
-    }, [userData]); // Run whenever userData changes
+    }, [userData]); 
 
     return (
         <div style={{ height: "3462px" }} className={`fade-in-left  ${userData ? 'show' : ''}`}>

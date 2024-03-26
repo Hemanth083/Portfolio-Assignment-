@@ -10,7 +10,6 @@ const Projects = ({ useData }) => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        // Trigger the animation after a delay to ensure the component is mounted
         const animationTimeout = setTimeout(() => {
             setAnimationTriggered(true);
         }, 100);

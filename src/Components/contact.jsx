@@ -28,15 +28,15 @@ const Contact = ({ useData }) => {
                     <div className={`d-flex align-items-center justify-content-between mb-5 ${menuOpen ? 'menu-open' : ''} AlignCOntact  flex-row`}>
                         <div className='d-flex  flex-column'>
                             <h3 className='header'>Phone Number:</h3>
-                            <p>{useData.user.about.phoneNumber}</p>
+                            <p style={{ color: "salmon" }}>{useData.user.about.phoneNumber}</p>
                         </div>
                         <div className='d-flex flex-column'>
                             <h3 className='header'>Address:</h3>
-                            <p>{useData.user.about.address}</p>
+                            <p style={{ color: "salmon" }}>{useData.user.about.address}</p>
                         </div>
                         <div className='d-flex flex-column'>
                             <h3 className='header'>Email:</h3>
-                            <p>{useData.user.email}</p>
+                            <p style={{ color: "salmon" }}>{useData.user.email}</p>
                         </div>
                     </div>
                 )}

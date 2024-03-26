@@ -11,6 +11,7 @@ import menu from '../assets/menu.svg';
 import "../Components/styles.css"
 import "../Components/resume.css"
 import "../Components/project.css"
+import "./mainComponent"
 
 function MainComponent() {
     const [currentPage, setCurrentPage] = useState("About");
