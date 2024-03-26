@@ -15,7 +15,7 @@ const Skills = ({ useData }) => {
     }, []);
 
     return (
-        <div className={`w-100 h-100 mb-5 d-flex align-items-center justify-content-center bg-dark slide-in-left ${animationTriggered ? 'show' : ''}`}>
+        <div className={`w-100  mb-5 d-flex align-items-center justify-content-center bg-dark slide-in-left ${animationTriggered ? 'show' : ''}`}>
             <div style={{ width: '80%' }}>
                 <h1 className="header fs-1 pt-5 pd-5 border-bottom">Skills</h1>
                 {useData && useData.user && useData.user.skills ? (

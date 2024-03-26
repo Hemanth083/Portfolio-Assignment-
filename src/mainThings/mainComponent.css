@@ -10,7 +10,7 @@
 }
 .NavButtons:hover {
   border-right: 5px solid salmon !important;
-  background-color: rgb(34, 34, 34);
+  /* background-color: rgb(34, 34, 34); */
 }
 .buttonBackground {
   background-color: salmon;
@@ -87,8 +87,15 @@
     border: none !important;
     height: 100%;
     border-bottom: 5px solid transparent;
+    text-decoration: none;
+    width: 100% !important;
   }
-  .NavButtons:hover {
+  .active {
+    background-color: rgba(0, 0, 0, 0.685) !important;
+    color: white !important;
+  }
+  .NavButtons:hover,
+  .active {
     border-bottom: 5px solid salmon !important;
     border-right: none !important;
   }
@@ -110,7 +117,6 @@
   }
   .NavButtons {
     border: none;
-    width: 100%;
   }
   .NavButtons:hover {
     background-color: transparent;

@@ -57,18 +57,25 @@
   transform: scale(1.6); /* Scale up the image on hover */
 }
 .heading {
-  font-family: "bold" !important;
+  font-family: "no";
   font-size: 50px;
   font-weight: 900;
   letter-spacing: 3px;
 }
 .WhatIDo {
-  height: 1500px !important;
+  height: 2600px !important;
 }
 .carousel-container {
   width: 50%; /* Adjust the width as needed */
   height: 400px; /* Adjust the height as needed */
   margin: auto; /* Center the Carousel horizontally */
+}
+.Services-animation :hover {
+  background-color: rgba(0, 0, 0, 0.373);
+  border-radius: 0px 100px 100px 0px;
+}
+.TestimonialText:hover {
+  background-color: transparent;
 }
 
 .d-grid {
@@ -152,13 +159,13 @@ p {
   transform: translateX(0);
 }
 
-
 /* //////////////////////////////////////////////////////// */
 
 @media (max-width: 820px) {
   .about-Container {
     flex-direction: column !important;
   }
+
   .paragraph {
     color: rgb(152, 152, 152) !important;
   }
@@ -196,5 +203,10 @@ p {
   }
   .heading {
     font-size: 26px;
+  }
+}
+@media (max-width: 400px) {
+  .testimonials {
+    flex-direction: column !important;
   }
 }

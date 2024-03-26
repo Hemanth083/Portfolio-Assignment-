@@ -4,6 +4,7 @@ import { Form, Button } from 'react-bootstrap';
 
 const Contact = ({ useData }) => {
     const [animationTriggered, setAnimationTriggered] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -15,12 +16,16 @@ const Contact = ({ useData }) => {
         return () => clearTimeout(animationTimeout);
     }, []);
 
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <div style={{ height: '100vh' }} className={`w-100 bg-dark d-flex align-items-center flex-column justify-content-start slide-in-left ${animationTriggered ? 'show' : ''}`}>
             <div style={{ width: '80%' }}>
                 <h1 className='header mt-5 mb-5 border-bottom'>Contact</h1>
                 {useData && useData.user && useData.user.about && (
-                    <div className='d-flex align-items-center justify-content-between mb-5 AlignCOntact  flex-row'>
+                    <div className={`d-flex align-items-center justify-content-between mb-5 ${menuOpen ? 'menu-open' : ''} AlignCOntact  flex-row`}>
                         <div className='d-flex  flex-column'>
                             <h3 className='header'>Phone Number:</h3>
                             <p>{useData.user.about.phoneNumber}</p>
@@ -37,26 +42,32 @@ const Contact = ({ useData }) => {
                 )}
             </div>
             <Form style={{ width: '80%' }}>
-                <div className='d-flex flex-row w-100'>
+                <div className={`d-flex flex-row w-100 ${menuOpen ? 'menu-open' : ''}`}>
                     <div className='w-50 mr-4'>
                         <Form.Group controlId="formFullName">
-                            <Form.Control className='mb-4 bg-transparent inputfield' type="text" placeholder="Full Name" />
+                            <Form.Control required className='mb-4 inputfield' type="text" placeholder="Full Name" />
                         </Form.Group>
                         <Form.Group controlId="formEmail">
-                            <Form.Control className='mb-4 bg-transparent inputfield' type="email" placeholder="Email" />
+                            <Form.Control required className='mb-4 t inputfield' type="email" placeholder="Email" />
                         </Form.Group>
                         <Form.Group controlId="formSubject">
-                            <Form.Control className="mb-5 bg-transparent inputfield" type="text" placeholder="Subject" />
+                            <Form.Control required className="mb-5 inputfield" type="text" placeholder="Subject" />
                         </Form.Group>
                         <Button
                             style={{
-                                backgroundColor: 'salmon',
+                                background: "transparent",
+                                borderRadius: "0px",
                                 border: 'none',
                                 outline: 'none',
                                 boxShadow: 'none',
+                                borderTop: "2px solid salmon",
+                                borderBottom: "2px solid salmon",
+                                borderLeft: "2px solid transparent",
+                                borderRight: "2px solid transparent"
                             }}
                             variant="primary"
                             type="submit"
+                            className='button  text-secondary '
                         >
                             Send Message
                         </Button>

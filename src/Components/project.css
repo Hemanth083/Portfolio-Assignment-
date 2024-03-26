@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "nothing";
+  src: url("../assets/Nothing_You_Could_Do,Ojuju/Nothing_You_Could_Do/NothingYouCouldDo-Regular.ttf");
+}
+@font-face {
+  font-family: "no";
+  src: url("../assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf");
+}
+@font-face {
+  font-family: "bold";
+  src: url("../assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf");
+}
 .header {
   font-family: "bold";
   font-weight: 100;
@@ -21,6 +33,40 @@
 
 .curser {
   cursor: pointer;
+}
+/* Override Bootstrap styles for Dropdown */
+.dropdown-toggle {
+  background-color: black; /* Background color */
+  color: white; /* Text color */
+  border-color: black; /* Border color */
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus,
+.dropdown-toggle:active {
+  background-color: black; /* Hover, focus, and active background color */
+  color: white; /* Hover, focus, and active text color */
+  border-color: black; /* Hover, focus, and active border color */
+}
+
+.dropdown-menu {
+  background-color: black; /* Dropdown menu background color */
+  color: white; /* Dropdown menu text color */
+}
+
+/* Override Bootstrap styles for Button */
+.btn-custom {
+  background-color: black; /* Button background color */
+  color: white; /* Button text color */
+  border-color: black; /* Button border color */
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active {
+  background-color: black; /* Hover, focus, and active background color */
+  color: white; /* Hover, focus, and active text color */
+  border-color: black; /* Hover, focus, and active border color */
 }
 
 .skills-container {
@@ -77,14 +123,28 @@
 .inputfield {
   color: white !important;
   background: transparent;
+  border: none;
+  border-bottom: 3px solid gray;
+  border-top: 3px solid gray;
+  background-color: rgba(0, 0, 0, 0.256) !important;
+  border-radius: 0%;
 }
 
 .inputfield::placeholder {
-  color: white;
+  color: gray;
+  font-family: "bold";
+}
+.inputfield:hover {
+  color: white !important;
+  border-color: salmon;
 }
 
 .inputfield:focus {
   background: transparent;
+  border: none;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid salmon;
+  background-color: rgba(0, 0, 0, 0.256) !important;
 }
 
 /* Slide-in animation */
@@ -95,6 +155,14 @@
 
 .slide-in-left.show {
   transform: translateX(0);
+}
+.button {
+  font-family: "bold";
+}
+.button:hover {
+  border-left: 2px solid salmon !important;
+  border-right: 2px solid salmon !important;
+  color: white !important;
 }
 
 /* Mobile and Tablet Styles */
@@ -117,6 +185,9 @@
 
   .AlignCOntact {
     flex-direction: column !important;
+    width: 100% !important;
+  }
+  .inputfield {
     width: 100% !important;
   }
 }
