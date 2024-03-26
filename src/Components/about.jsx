@@ -32,11 +32,11 @@ const About = () => {
                         return prevIndex + 1;
                     }
                 });
-            }, 2300); 
+            }, 2300); // Change the duration as needed
 
             return () => clearInterval(interval);
         }
-    }, [userData]); 
+    }, [userData]); // Run whenever userData changes
 
     return (
         <div style={{ height: "3462px" }} className={`fade-in-left  ${userData ? 'show' : ''}`}>

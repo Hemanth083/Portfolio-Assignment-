@@ -29,7 +29,7 @@ const Resume = () => {
     };
 
     return (
-        <div className={`slide-in-left ${animationTriggered ? 'show' : ''}`}>
+        <div className={`h-100 slide-in-left ${animationTriggered ? 'show' : ''}`}>
             <div className="w-100 h-100 pt-3 d-flex align-items-start gap-5  resumeAlign justify-content-center bg-dark">
                 <div style={{ width: "60%" }} className="d-flex resumeElemennt align-items-start justify-content-start flex-column">
                     <h1 className="w-75 mb-5 border-bottom text-secondary heading">Education</h1>

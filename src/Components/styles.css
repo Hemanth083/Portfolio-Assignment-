@@ -172,7 +172,7 @@ p {
   .about-content {
     /* padding-top: 0%; */
     width: 100% !important;
-    height: 400px;
+    /* height: 400px; */
   }
 
   .cropped-image-container {
@@ -192,11 +192,10 @@ p {
     text-align: justify;
     margin-top: 8%;
   }
-  .about {
-    height: 900px;
-  }
+
   .carousel-container {
     width: 100%;
+    height: auto;
   }
   .Wahat {
     margin-top: 50px;
@@ -204,9 +203,23 @@ p {
   .heading {
     font-size: 26px;
   }
+  .testimonials {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+  }
 }
-@media (max-width: 400px) {
+@media (max-width: 432px) {
   .testimonials {
     flex-direction: column !important;
+  }
+
+  .resumeAlign {
+    height: 100%;
+  }
+  .show {
+    height: 4096px !important;
+  }
+  .mainImage {
+    width: 100%;
   }
 }

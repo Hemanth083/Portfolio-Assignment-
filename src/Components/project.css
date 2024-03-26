@@ -35,17 +35,17 @@
   cursor: pointer;
 }
 .dropdown-toggle {
-  background-color: black; 
-  color: white; 
-  border-color: black; 
+  background-color: black;
+  color: white;
+  border-color: black;
 }
 
 .dropdown-toggle:hover,
 .dropdown-toggle:focus,
 .dropdown-toggle:active {
-  background-color: black; 
-  color: white; 
-  border-color: black; 
+  background-color: black;
+  color: white;
+  border-color: black;
 }
 
 .dropdown-menu {

@@ -33,12 +33,14 @@
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
+    /* height: 100%; */
   }
   .resumeElemennt {
     width: 100% !important;
     display: flex;
     align-items: center;
     justify-content: center !important;
+    padding-top: 0%;
   }
   .resumeSkills {
     width: 80% !important;
@@ -54,6 +56,17 @@
   }
   .resumeSkills {
     margin-bottom: 0px;
-    height: 50%;
+    /* height: 50%; */
+  }
+}
+@media (max-width: 443px) {
+  .resumeAlign {
+    height: 4076px;
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: none;
+    align-items: center !important;
+    justify-content: center;
   }
 }
