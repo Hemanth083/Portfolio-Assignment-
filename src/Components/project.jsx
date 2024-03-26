@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Button, Dropdown } from 'react-bootstrap'; // Assuming you are using react-bootstrap
+import { Container, Row, Col, Button, Dropdown, Modal } from 'react-bootstrap'; // Assuming you are using react-bootstrap
 import "./project.css";
 import Resume from './resume';
 
@@ -7,6 +7,8 @@ const Projects = ({ useData }) => {
     const [animationTriggered, setAnimationTriggered] = useState(false);
     const [filteredProjects, setFilteredProjects] = useState([]);
     const [uniqueTechStacks, setUniqueTechStacks] = useState([]);
+    const [showModal, setShowModal] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -47,6 +49,16 @@ const Projects = ({ useData }) => {
         setFilteredProjects([]);
     };
 
+    const openModal = (project) => {
+        setSelectedProject(project);
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+        setSelectedProject(null);
+    };
+
     return (
         <div style={{ height: "auto" }} className={`slide-in-left ${animationTriggered ? 'show' : ''}`}>
             <div className="w-100 bg-dark p-5 d-flex flex-column align-items-center justify-content-center">
@@ -71,11 +83,11 @@ const Projects = ({ useData }) => {
                     <Row>
                         {(
                             (filteredProjects.length > 0 ? filteredProjects : (useData && useData.user && useData.user.projects) ? useData.user.projects : [])
-                                .slice() // Create a copy of the array
-                                .reverse() // Reverse the order of the array
+                                .slice()
+                                .reverse()
                                 .map((project, index) => (
                                     <Col key={index} md={6} className="mb-4">
-                                        <div className="curser project-image-container h-75">
+                                        <div className="curser project-image-container h-75" onClick={() => openModal(project)}>
                                             <img className="img-fluid project-image" src={project.image.url} alt={`Project ${index}`} />
                                         </div>
                                         <div className="h-25 pt-3 pl-3 bg-black rounded-3 opacity-50">
@@ -89,6 +101,24 @@ const Projects = ({ useData }) => {
 
                 </Container>
             </div>
+            <Modal show={showModal} onHide={closeModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title>{selectedProject && selectedProject.title}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body className=' bg-dark d-flex w-100 align-items-center  justify-content-center  flex-column '>
+                    {selectedProject && (
+                        <>
+                            <img width='70%' src={selectedProject.image.url}></img>
+                            <p className=' mt-4  text-white'>Tech Stack: {selectedProject.techStack.join(', ')}</p>
+                            {/* <p className='text-white'>Link: <a href={selectedProject.liveurl} rel="noopener noreferrer">{}</a></p> */}
+                            <p style={{ textAlign: "justify" }} className=' w-100 text-white'>{selectedProject.description}</p>
+                            <button style={{ borderBottom: "2px solid salmon", borderTop: "2px solid salmon", borderLeft: "2px solid transparent", borderRight: "2px solid transparent" }} className='button w-25  bg-transparent  text-white  '>Live</button>
+
+                        </>
+                    )}
+                </Modal.Body>
+
+            </Modal>
         </div>
     );
 };

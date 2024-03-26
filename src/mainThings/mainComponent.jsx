@@ -23,6 +23,7 @@ function MainComponent() {
             .then(response => {
                 setData(response.data);
                 setLoading(false);
+                console.log(data)
             })
             .catch(error => {
                 setError('Error fetching data');
@@ -65,7 +66,9 @@ function MainComponent() {
         setCurrentPage(page);
     };
 
-    if (loading) return <div>Loading...</div>;
+    if (loading) return <div ><h1 className='text-dark'>Loading...</h1>
+
+    </div>;
     if (error) return <div>Error: {error}</div>;
 
     return (
