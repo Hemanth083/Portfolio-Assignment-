@@ -26,8 +26,11 @@
 }
 .nav {
   height: 750px !important;
-  width: 10%;
+  width: 10% !important;
   border-right: 4px solid black;
+  left: 0;
+  right: auto;
+  transform: translateX(0%);
 }
 .fixed-left {
   left: 0;

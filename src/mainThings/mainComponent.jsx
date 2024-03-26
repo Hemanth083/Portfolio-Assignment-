@@ -8,10 +8,7 @@ import axios from 'axios';
 import Skills from '../Components/skills';
 import Contact from '../Components/contact';
 import menu from '../assets/menu.svg';
-import "../Components/styles.css"
-import "../Components/resume.css"
-import "../Components/project.css"
-import "./mainComponent"
+import "./mainComponent.css"
 
 function MainComponent() {
     const [currentPage, setCurrentPage] = useState("About");
