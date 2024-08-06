@@ -20,13 +20,14 @@
   font-family: "no";
   letter-spacing: 2px;
   word-spacing: 1px;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .cropped-image {
   width: 100%;
   height: auto;
   object-fit: cover;
+  margin-bottom: 10%;
 }
 .Name {
   font-family: "nothing";
@@ -63,27 +64,17 @@
   letter-spacing: 3px;
 }
 .WhatIDo {
-  height: 2600px !important;
+  height: auto !important;
 }
+
+/* Remove testimonial-related styles */
 .carousel-container {
   width: 50%; /* Adjust the width as needed */
   height: 400px; /* Adjust the height as needed */
   margin: auto; /* Center the Carousel horizontally */
 }
-.Services-animation :hover {
-  background-color: rgba(0, 0, 0, 0.373);
-  border-radius: 0px 100px 100px 0px;
-}
-.TestimonialText:hover {
-  background-color: transparent;
-}
 
-.d-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-gap: 20px; /* Gap between grid items */
-  width: 80%;
-} /* Custom CSS for Carousel controls */
+/* Custom CSS for Carousel controls */
 .carousel-control-prev,
 .carousel-control-next {
   color: salmon; /* Set the color of the controls */
@@ -165,32 +156,31 @@ p {
   .about-Container {
     flex-direction: column !important;
   }
+  .about{
+    height: auto !important;
+  }
 
   .paragraph {
     color: rgb(152, 152, 152) !important;
   }
   .about-content {
-    /* padding-top: 0%; */
+    /* padding-top: 10%; */
     width: 100% !important;
-    /* height: 400px; */
+    /* height: 100vh !important; */
+  }
+  .paragraph {
+    /* color: white !important; */
+    font-size: 18px;
   }
 
   .cropped-image-container {
     width: 100% !important;
-    height: 500px !important;
+    /* height: 700px ; */
     overflow: visible;
   }
   .mainImage {
-    height: auto;
-  }
-  .testimonials {
-    flex-direction: column;
-    width: 100% !important;
-  }
-  .TestimonialText {
-    width: 100%;
-    text-align: justify;
-    margin-top: 8%;
+    margin-top: -15%;
+    /* height:auto; */
   }
 
   .carousel-container {
@@ -203,21 +193,27 @@ p {
   .heading {
     font-size: 26px;
   }
-  .testimonials {
-    margin-bottom: 0px !important;
-    margin-top: 0px !important;
+  .MediaImage {
+    width: 30px;
+  }
+  .Services-animation {
+    flex-direction: column !important;
+    justify-content: space-between;
+  }
+  .TestimonialText {
+    text-align: center;
+    margin-top: 2%;
   }
 }
 @media (max-width: 432px) {
-  .testimonials {
-    flex-direction: column !important;
-  }
-
   .resumeAlign {
     height: 100%;
   }
   .show {
-    height: 4096px !important;
+    height: auto !important;
+  }
+  .cropped-image-container {
+    /* height: 600px !important; */
   }
   .mainImage {
     width: 100%;

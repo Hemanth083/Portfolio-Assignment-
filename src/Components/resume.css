@@ -35,8 +35,8 @@
     width: 100% !important;
     /* height: 100%; */
   }
-  .resumeElemennt {
-    width: 100% !important;
+  .resumeElement {
+    width: 90% !important;
     display: flex;
     align-items: center;
     justify-content: center !important;
@@ -61,7 +61,7 @@
 }
 @media (max-width: 443px) {
   .resumeAlign {
-    height: 4076px;
+    height: auto;
     margin: 0px;
     margin-top: 0px;
     margin-bottom: 0px;

@@ -3,32 +3,27 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import About from '../Components/about';
 import Resume from '../Components/resume';
+import myImage from '../assets/myImage.jpg'
 import Projects from '../Components/project';
-import axios from 'axios';
 import Skills from '../Components/skills';
 import Contact from '../Components/contact';
 import menu from '../assets/menu.svg';
 import "./mainComponent.css"
 
+// Sample local data
+
+
 function MainComponent() {
     const [currentPage, setCurrentPage] = useState("About");
-    const [data, setData] = useState(null);
+    // const [data, setData] = useState(localData); // Use local data
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [showMenu, setShowMenu] = useState(false);
     const [activeSection, setActiveSection] = useState(null);
 
     useEffect(() => {
-        axios.get("https://portfolio-backend-30mp.onrender.com/api/v1/get/user/65b3a22c01d900e96c4219ae")
-            .then(response => {
-                setData(response.data);
-                setLoading(false);
-                console.log(data)
-            })
-            .catch(error => {
-                setError('Error fetching data');
-                setLoading(false);
-            });
+        // Simulate data fetching if needed
+        setLoading(false);
     }, []);
 
     useEffect(() => {
@@ -66,17 +61,13 @@ function MainComponent() {
         setCurrentPage(page);
     };
 
-    if (loading) return <div ><h1 className='text-dark'>Loading...</h1>
-
-    </div>;
+    if (loading) return <div><h1 className='text-dark'>Loading...</h1></div>;
     if (error) return <div>Error: {error}</div>;
 
     return (
         <div className="d-flex flex-row mainContainer">
             <Navbar className="flex-column align-items-center justify-content-center nav fixed-top" bg="dark" variant="dark">
-                {data && data.user && data.user.about && (
-                    <img src={data.user.about.avatar.url} className='rounded-5 logo' width="70px" height="auto" alt="" />
-                )}
+                <img src={myImage} className='rounded-5 logo' width="70px" height="auto" alt="" />
                 <Nav className="d-flex w-100 justify-content-center align-items-center links flex-column h-75">
                     <Link
                         to="about"
@@ -129,7 +120,6 @@ function MainComponent() {
                         Contact
                     </Link>
                 </Nav>
-
             </Navbar>
             {showMenu && (
                 <div className="menu-content">
@@ -187,19 +177,19 @@ function MainComponent() {
             )}
             <div className='Content'>
                 <div id='about' style={{ background: activeSection === 'About' ? '#f0f0f0' : 'transparent' }}>
-                    <About id="about" userData={data} />
+                    <About id="about" />
                 </div>
                 <div id='resume' style={{ background: activeSection === 'Resume' ? '#f0f0f0' : 'transparent' }}>
-                    <Resume id="resume" useData={data} />
+                    <Resume id="resume" />
                 </div>
                 <div id='projects' style={{ background: activeSection === 'Projects' ? '#f0f0f0' : 'transparent' }}>
-                    <Projects id="projects" useData={data} />
+                    <Projects id="projects" />
                 </div>
                 <div id='skills' style={{ background: activeSection === 'Skills' ? '#f0f0f0' : 'transparent' }}>
-                    <Skills id="skills" useData={data} />
+                    <Skills id="skills" />
                 </div>
                 <div id='contact' style={{ background: activeSection === 'Contact' ? '#f0f0f0' : 'transparent' }}>
-                    <Contact id="contact" useData={data} />
+                    <Contact id="contact" />
                 </div>
             </div>
             <img src={menu} alt="Menu" className="menu-icon" onClick={() => setShowMenu(!showMenu)} />
@@ -208,4 +198,3 @@ function MainComponent() {
 }
 
 export default MainComponent;
-

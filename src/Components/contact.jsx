@@ -2,17 +2,25 @@ import React, { useEffect, useState } from 'react';
 import './project.css';
 import { Form, Button } from 'react-bootstrap';
 
-const Contact = ({ useData }) => {
+const Contact = () => {
     const [animationTriggered, setAnimationTriggered] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const userData = {
+        user: {
+            about: {
+                phoneNumber: "6362919752",
+                address: "#172 ,5th cross ,Raghavendra Layout ,Begur ,Bengaluru 560068",
+            },
+            email: "hemantheaddress@gmail.com",
+        },
+    };
+
     useEffect(() => {
         window.scrollTo(0, 0);
-        // Trigger the animation after a delay to ensure the component is mounted
         const animationTimeout = setTimeout(() => {
             setAnimationTriggered(true);
         }, 100);
-        // Clear the timeout on component unmount
         return () => clearTimeout(animationTimeout);
     }, []);
 
@@ -21,22 +29,22 @@ const Contact = ({ useData }) => {
     };
 
     return (
-        <div style={{ height: '100vh' }} className={`w-100 bg-dark d-flex align-items-center flex-column justify-content-start slide-in-left ${animationTriggered ? 'show' : ''}`}>
+        <div style={{ height: '102vh' }} className={`w-100 bg-dark d-flex align-items-center flex-column justify-content-start slide-in-left ${animationTriggered ? 'show' : ''}`}>
             <div style={{ width: '80%' }}>
                 <h1 className='header mt-5 mb-5 border-bottom'>Contact</h1>
-                {useData && useData.user && useData.user.about && (
-                    <div className={`d-flex align-items-center justify-content-between mb-5 ${menuOpen ? 'menu-open' : ''} AlignCOntact  flex-row`}>
-                        <div className='d-flex  flex-column'>
+                {userData && userData.user && userData.user.about && (
+                    <div className={`d-flex align-items-center justify-content-between mb-5 ${menuOpen ? 'menu-open' : ''} AlignContact flex-row`}>
+                        <div className='d-flex flex-column'>
                             <h3 className='header'>Phone Number:</h3>
-                            <p style={{ color: "salmon" }}>{useData.user.about.phoneNumber}</p>
+                            <p style={{ color: "salmon" }}>{userData.user.about.phoneNumber}</p>
                         </div>
                         <div className='d-flex flex-column'>
                             <h3 className='header'>Address:</h3>
-                            <p style={{ color: "salmon" }}>{useData.user.about.address}</p>
+                            <p style={{ color: "salmon" }}>{userData.user.about.address}</p>
                         </div>
                         <div className='d-flex flex-column'>
                             <h3 className='header'>Email:</h3>
-                            <p style={{ color: "salmon" }}>{useData.user.email}</p>
+                            <p style={{ color: "salmon" }}>{userData.user.email}</p>
                         </div>
                     </div>
                 )}
@@ -48,7 +56,7 @@ const Contact = ({ useData }) => {
                             <Form.Control required className='mb-4 inputfield' type="text" placeholder="Full Name" />
                         </Form.Group>
                         <Form.Group controlId="formEmail">
-                            <Form.Control required className='mb-4 t inputfield' type="email" placeholder="Email" />
+                            <Form.Control required className='mb-4 inputfield' type="email" placeholder="Email" />
                         </Form.Group>
                         <Form.Group controlId="formSubject">
                             <Form.Control required className="mb-5 inputfield" type="text" placeholder="Subject" />
@@ -67,7 +75,7 @@ const Contact = ({ useData }) => {
                             }}
                             variant="primary"
                             type="submit"
-                            className='button  text-secondary '
+                            className='button text-secondary'
                         >
                             Send Message
                         </Button>

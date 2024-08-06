@@ -189,4 +189,10 @@
   .inputfield {
     width: 100% !important;
   }
+  .project-image-container {
+    height: 60% !important;
+  }
+  .titlr{
+    height: 38%;
+  }
 }
