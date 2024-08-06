@@ -10,8 +10,7 @@ import webDev from '../assets/images.png';
 const localData = {
     user: {
         about: {
-            phoneNumber: '123-456-7890',
-            address: '123 Main St, Anytown, USA',
+            phoneNumber: '6362919752',
         },
         email: 'example@example.com',
         social_handles: [
@@ -23,7 +22,7 @@ const localData = {
             { image: { url: linked }, link: 'https://www.linkedin.com/in/hemanth-n-45b165278/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
         ],
         services: [
-            { image: { url: webDev }, name: 'Front-End development', desc: 'I build applications', charge: '$100' },
+            { image: { url: webDev }, name: 'Front-End development', desc: 'I build applications',  },
         ],
     },
 };
@@ -75,7 +74,7 @@ const About = () => {
                             <div style={{ width: '100%' }} className="d-flex h-100 align-items-center justify-content-center flex-column">
                                 <p className="TestimonialText w-75">{service.name}</p>
                                 <p className="TestimonialText text-secondary w-75">{service.desc}</p>
-                                <p className="TestimonialText text-secondary w-75">{service.charge}</p>
+                                {/* <p className="TestimonialText text-secondary w-75">{service.charge}</p> */}
                             </div>
                         </div>
                     ))}
