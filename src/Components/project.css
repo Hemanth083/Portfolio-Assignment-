@@ -190,9 +190,18 @@
     width: 100% !important;
   }
   .project-image-container {
-    height: 60% !important;
+    height: 50% !important;
   }
-  .titlr{
-    height: 38%;
+  .titlr {
+    height: 45% !important;
+  }
+  .AlignContact,
+  .form {
+    flex-direction: column !important;
+    align-items: start !important;
+  }
+  .form,
+  .formsub {
+    display: none;
   }
 }

@@ -218,4 +218,10 @@ p {
   .mainImage {
     width: 100%;
   }
+  .WhatIDo{
+    padding-top: 0% !important;
+  }
+  .Social-images{
+    margin-bottom: 3rem;
+  }
 }

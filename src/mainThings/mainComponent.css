@@ -25,7 +25,7 @@
   height: 100%;
 }
 .nav {
-  height: 750px !important;
+  height: 100vh !important;
   width: 10% !important;
   border-right: 4px solid black;
   left: 0;

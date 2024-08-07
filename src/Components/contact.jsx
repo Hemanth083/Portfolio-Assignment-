@@ -50,8 +50,8 @@ const Contact = () => {
                 )}
             </div>
             <Form style={{ width: '80%' }}>
-                <div className={`d-flex flex-row w-100 ${menuOpen ? 'menu-open' : ''}`}>
-                    <div className='w-50 mr-4'>
+                <div className={`d-flex flex-row w-100 form ${menuOpen ? 'menu-open' : ''}`}>
+                    <div className='w-50 formsub mr-4'>
                         <Form.Group controlId="formFullName">
                             <Form.Control required className='mb-4 inputfield' type="text" placeholder="Full Name" />
                         </Form.Group>
@@ -80,7 +80,7 @@ const Contact = () => {
                             Send Message
                         </Button>
                     </div>
-                    <div className='w-50'>
+                    <div className='w-50 formsub'>
                         <Form.Group controlId="formMessage">
                             <Form.Control as="textarea" rows={6} placeholder="Enter your message" className='inputfield' />
                         </Form.Group>
