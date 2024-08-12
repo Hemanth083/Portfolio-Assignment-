@@ -12,21 +12,21 @@ const localData = {
         projects: [
             {
                 title: "NorthStar",
-                techStack: ["React", "HTML", "JavaScipt", "CSS", "Redux"],
+                techStack: ["React", "HTML", "JavaScript", "CSS", "Redux"],
                 image: { url: 'https://my-portfolio-mu-blond.vercel.app/assets/northstar.png' },
                 description: "NoethStar is a React and Redux-driven cloth shopping site, provides a user-friendly interface with a diverse range of clothing items. Key features include a dynamic shopping cart, secure user authentication, and efficient state management with Redux. The platform ensures a responsive design for seamless browsing across devices, offering a modern and enjoyable shopping experience.",
                 liveurl: "https://north-star-react-app.vercel.app/"
             },
             {
                 title: "Maa Foundation",
-                techStack: ["React", "JavaScipt", "CSS", "Tailwind CSS", "GitHub"],
+                techStack: ["React", "JavaScript", "CSS", "Tailwind CSS", "GitHub"],
                 image: { url: img3 },
-                description: "This project is built Women's Empowerment ",
+                description: "The Maa Foundation Platform is a web application aimed at empowering communities through educational and welfare programs.Key challenges included efficiently managing and displaying large volumes of educational resources, which required implementing pagination in React.js.Additionally, ensuring a fully responsive design across various devices involved extensive testing and fine- tuning to maintain UI consistency. ",
                 liveurl: "https://maa-foundation.vercel.app"
             },
             {
                 title: "PokeWorld",
-                techStack: ["React", "JavaScipt", "CSS", "Axios", "Bootstrap"],
+                techStack: ["React", "JavaScript", "CSS", "Axios", "Bootstrap"],
                 image: { url: img1 },
                 description: "This Application is build to display a list of pokimons using pokiAPI",
                 liveurl: "https://poke-world-delta.vercel.app/"
@@ -34,7 +34,7 @@ const localData = {
 
             {
                 title: "Recipe Book",
-                techStack: ["React", "JavaScipt", "CSS", "Axios", "Bootstrap"],
+                techStack: ["React", "JavaScript", "CSS", "Axios", "Bootstrap"],
                 image: { url: img4 },
                 description: "This Application is build to display a list of Recipes using RecipeAPI where we can search Recipes based on the dish name",
                 liveurl: "https://recipe-book-amber.vercel.app/"
@@ -136,7 +136,6 @@ const Projects = () => {
                     <Row>
                         {(
                             (filteredProjects.length > 0 ? filteredProjects : (localData && localData.user && localData.user.projects) ? localData.user.projects : [])
-                                .reverse()
                                 .map((project, index) => (
                                     <Col key={index} md={6} className="mb-5">
                                         <div className="curser project-image-container " style={{ height: "70%" }} onClick={() => openModal(project)}>
