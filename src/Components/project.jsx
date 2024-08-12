@@ -136,6 +136,7 @@ const Projects = () => {
                     <Row>
                         {(
                             (filteredProjects.length > 0 ? filteredProjects : (localData && localData.user && localData.user.projects) ? localData.user.projects : [])
+                                .reverse()
                                 .map((project, index) => (
                                     <Col key={index} md={6} className="mb-5">
                                         <div className="curser project-image-container " style={{ height: "70%" }} onClick={() => openModal(project)}>
