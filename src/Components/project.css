@@ -204,4 +204,15 @@
   .formsub {
     display: none;
   }
+  .big{
+    height: 80vh;
+    background-color: rgba(1, 0, 0, 0.833) !important;
+  }
+  .header-details{
+        background-color: rgba(1, 0, 0, 0.553) !important;
+  }
+  .header-name{
+    color: white;
+  }
+  
 }

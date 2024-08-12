@@ -153,10 +153,10 @@ const Projects = () => {
                 </Container>
             </div>
             <Modal show={showModal} onHide={closeModal}>
-                <Modal.Header closeButton>
-                    <Modal.Title>{selectedProject && selectedProject.title}</Modal.Title>
+                <Modal.Header className='header-details' closeButton>
+                    <Modal.Title className='header-name' >{selectedProject && selectedProject.title}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body className='bg-dark d-flex w-100 align-items-center justify-content-center flex-column'>
+                <Modal.Body className='bg-dark d-flex w-100 align-items-center justify-content-center big flex-column'>
                     {selectedProject && (
                         <>
                             <img width='70%' src={selectedProject.image.url} alt="Selected Project"></img>
