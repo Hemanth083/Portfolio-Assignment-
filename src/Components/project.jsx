@@ -6,10 +6,28 @@ import img2 from "../assets/img2.png"
 import img3 from "../assets/img3.png"
 import img4 from "../assets/img4.png"
 import img5 from "../assets/img5.png"
+import img6 from "../assets/img6.png"
+import img7 from "../assets/img7.png"
+
+
 
 const localData = {
     user: {
         projects: [
+            {
+                title: "North Car Rentals",
+                techStack: ["JavaScript", "CSS", "HTML", "PHP"],
+                image: { url: img6 },
+                description: "Worked on the mobile-responsive view of North Car Rentals, adding key features such as a location page, calendar functionality, and a 'Manage My Booking' page. Additionally, implemented login and signup functionality, along with client-side redemption features, and made several enhancements to improve usability and performance.",
+                liveurl: "https://northcarrentals.com/"
+            },
+            {
+                title: "Booking Rental Cars",
+                techStack: ["JavaScript", "CSS", "HTML", "PHP"],
+                image: { url: img7 },   
+                description: "Developed the Booking Rentals Car (BRC) application from the ground up, integrating key features such as a calendar for seamless scheduling, a timer for optimized booking management, smooth loaders for better user experience, and a fully mobile-responsive design, along with various other enhancements to improve functionality and performance",
+                liveurl: "http://139.177.197.74/"
+            },
             {
                 title: "NorthStar",
                 techStack: ["React", "HTML", "JavaScript", "CSS", "Redux"],
@@ -53,6 +71,7 @@ const localData = {
                 description: "This is my previous Portfolio where it's also responsive and user-friendly ",
                 liveurl: "https://my-portfolio-mu-blond.vercel.app/"
             },
+
         ]
     }
 };

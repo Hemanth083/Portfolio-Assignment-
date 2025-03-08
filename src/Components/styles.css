@@ -156,7 +156,7 @@ p {
   .about-Container {
     flex-direction: column !important;
   }
-  .about{
+  .about {
     height: auto !important;
   }
 
@@ -205,6 +205,12 @@ p {
     margin-top: 2%;
   }
 }
+.downloadCV {
+  background-color: salmon !important;
+  border: none;
+  padding: 10px;
+  border-radius: 0px;
+}
 @media (max-width: 432px) {
   .resumeAlign {
     height: 100%;
@@ -218,10 +224,10 @@ p {
   .mainImage {
     width: 100%;
   }
-  .WhatIDo{
+  .WhatIDo {
     padding-top: 0% !important;
   }
-  .Social-images{
+  .Social-images {
     margin-bottom: 3rem;
   }
 }
